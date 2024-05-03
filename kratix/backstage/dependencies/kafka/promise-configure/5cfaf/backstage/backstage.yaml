@@ -72,10 +72,11 @@ metadata:
   tags:
     - syntasso
     - kratix
+    - jenkins
 spec:
   type: service
   lifecycle: experimental
-  owner: kratix-platform
+  owner: hoangndst
   parameters:
     - title: Jenkins as a Service
       required:
@@ -95,6 +96,9 @@ spec:
             - dev
             - staging
             - prod
+          ui:widget: select
+          ui:options:
+            placeholder: Select environment
   steps:
   - id: k-apply
     name: Create a Jenkins
