@@ -94,7 +94,6 @@ spec:
           description: Environment for Jenkins instance
           enum:
             - dev
-            - staging
             - prod
           ui:widget: select
           ui:options:
@@ -112,4 +111,4 @@ spec:
           name: ${{ parameters.name }}
           namespace: default
         spec:
-          env: ${{ parameters.env }}
+          env: dev
