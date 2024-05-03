@@ -97,7 +97,7 @@ spec:
             - prod
   steps:
   - id: k-apply
-    name: Create a Kafka
+    name: Create a Jenkins
     action: kubernetes:apply
     input:
       namespaced: true
