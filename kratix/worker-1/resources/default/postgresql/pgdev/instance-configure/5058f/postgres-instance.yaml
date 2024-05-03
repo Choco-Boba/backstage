@@ -1,0 +1,19 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: hoangndst-pgdev-postgresql
+  namespace: default
+spec:
+  teamId: "hoangndst"
+  volume:
+    size: 1Gi
+  numberOfInstances: 1
+  users:
+    hoangndst:
+      - superuser
+      - createdb
+  databases:
+    hoangndst: hoangndst
+  postgresql:
+    version: "16"
+  enableLogicalBackup: false
