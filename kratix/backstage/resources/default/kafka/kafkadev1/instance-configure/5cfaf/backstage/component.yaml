@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kafka-kafkadev1
+  title: "Kafka kafkadev1"
+  description: Kafka created via the Promise
+  annotations:
+    backstage.io/kubernetes-label-selector: kafka=kafkadev1
+  links:
+  - url: https://github.com/syntasso/kratix-marketplace
+    title: Support
+    icon: help
+spec:
+  type: service
+  lifecycle: production
+  owner: kratix-worker
+  dependsOn:
+    - component:default/kafka
+  providesApis:
+    - kafka-promise-api
