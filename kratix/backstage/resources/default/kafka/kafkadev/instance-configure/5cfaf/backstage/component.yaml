@@ -5,7 +5,7 @@ metadata:
   title: "Kafka kafkadev"
   description: Kafka created via the Promise
   annotations:
-    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=kafkadev
+    backstage.io/kubernetes-label-selector: kafka=kafkadev
   links:
   - url: https://github.com/syntasso/kratix-marketplace
     title: Support
@@ -18,24 +18,3 @@ spec:
     - component:default/kafka
   providesApis:
     - kafka-promise-api
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: jenkins-jenkins-01
-  title: "Jenkins jenkins 01"
-  description: Jenkins created via the Promise
-  annotations:
-    backstage.io/kubernetes-label-selector: jenkins-cr=dev-jenkins-01
-  links:
-  - url: https://github.com/syntasso/kratix-marketplace
-    title: Support
-    icon: help
-spec:
-  type: service
-  lifecycle: production
-  owner: kratix-worker
-  dependsOn:
-    - component:default/jenkins
-  providesApis:
-    - jenkins-promise-api
