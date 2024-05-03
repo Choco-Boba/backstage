@@ -105,7 +105,7 @@ spec:
         apiVersion: marketplace.kratix.io/v1alpha1
         kind: jenkins
         metadata:
-          name: ${parameters.name}
+          name: ${{ parameters.name }}
           namespace: default
         spec:
-          env: ${parameters.env}
+          env: ${{ parameters.env }}
