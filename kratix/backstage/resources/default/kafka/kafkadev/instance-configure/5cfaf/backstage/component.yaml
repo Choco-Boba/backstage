@@ -5,7 +5,7 @@ metadata:
   title: "Kafka kafkadev"
   description: Kafka created via the Promise
   annotations:
-    backstage.io/kubernetes-label-selector: kafka=kafkadev
+    backstage.io/kubernetes-label-selector: app.kubernetes.io/instance=kafkadev
   links:
   - url: https://github.com/syntasso/kratix-marketplace
     title: Support
